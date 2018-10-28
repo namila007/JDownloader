@@ -27,12 +27,11 @@ public class workerDownload implements Runnable {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             String byteRange = start + "-" + end;
             con.setRequestProperty("Range", "bytes=" + byteRange);
-            System.out.println("bytes=" + byteRange);
+            System.out.println("bytes=" + byteRange );
 
 
             // connect to server
             con.connect();
-            System.out.println(con.getResponseMessage());
             if(con.getResponseCode() / 100 != 2) throw new Error("not 200 code");
 
             in = new BufferedInputStream(con.getInputStream());
@@ -46,7 +45,7 @@ public class workerDownload implements Runnable {
             while((numread = in.read(data,0,BUFFER_SIZE)) != -1)
             {
                 rfile.write(data,0,numread);
-                System.out.println(data);
+
             }
 
 
