@@ -4,8 +4,10 @@ public class main {
         Download dl1 = new Download(url,1);
         Download dl2 = new Download(url,2);
         Download dl3 = new Download(url,4);
+        Download dl4 = new Download(url,8);
         dl1.downloadFile();
         dl2.downloadFile();
         dl3.downloadFile();
+        dl4.downloadFile();
     }
 }

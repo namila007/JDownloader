@@ -27,7 +27,7 @@ public class workerDownload implements Runnable {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             String byteRange = start + "-" + end;
             con.setRequestProperty("Range", "bytes=" + byteRange);
-            System.out.println("bytes=" + byteRange );
+            //System.out.println("bytes=" + byteRange );
 
 
             // connect to server

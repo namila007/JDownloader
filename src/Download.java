@@ -43,7 +43,7 @@ public class Download {
             executorService.awaitTermination(1,TimeUnit.HOURS);
 
             Long end = System.nanoTime();
-            System.out.printf("Time Elapsed : %.4f ms\n",(end-start)/1e6);
+            System.out.printf("Time Elapsed for Threadsize %d : %.4f ms\n",threadsize,(end-start)/1e6);
 
         } catch (IOException e) {
             e.printStackTrace();
